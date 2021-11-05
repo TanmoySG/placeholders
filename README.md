@@ -31,7 +31,7 @@ A Placeholder is a single unit file storage that stores a file that can be fetch
 *Figure-1: Placeholder Flowdiagram*
 
 ![](./images/Placeholder-Structure.jpg)
-*Figure-1: Multiple Placeholder Structure*
+*Figure-2: Multiple Placeholder Structure*
 
 
 ## Use Cases
