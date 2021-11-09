@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./images/Logo.png" style="width: 30%" />
+</p>
+
 # Placeholder 
 
 Placeholders is a single-unit file storage solution for your Frontend.
