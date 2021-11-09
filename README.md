@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/Logo.png" style="width: 30%" />
+  <img src="./images/Logo.png" style="width: 25%" />
 </p>
 
 # Placeholder 
