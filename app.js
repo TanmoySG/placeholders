@@ -11,6 +11,10 @@ app.get("/", function(request, response){
     })
 })
 
+app.get("/test", function(request, response){
+    response.sendFile('./documentation/images/Logo.png', { root : "."})
+})
+
 app.listen(PORT, function(){
     console.log("Running")
 })
