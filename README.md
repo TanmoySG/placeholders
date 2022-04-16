@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/Logo.png" style="width: 25%" />
+  <img src="./documentation/images/Logo.png" style="width: 25%" />
 </p>
 
 # Placeholder 
@@ -31,10 +31,10 @@ A Placeholder is a single unit file storage that stores a file that can be fetch
 6. When Swaping the file in Placeholder Storage with a new file, with a different name or extension, the user can upload the new file withput renaming the file.
 7. The Placeholder Engine maps the Identifiers to the newly uploaded file in the Placeholder Storage.
 
-![](./images/Placeholder-Flowdiagram.jpg)
+![](./documentation/images/Placeholder-Flowdiagram.jpg)
 *Figure-1: Placeholder Flowdiagram*
 
-![](./images/Placeholder-Structure.jpg)
+![](./documentation/images/Placeholder-Structure.jpg)
 *Figure-2: Multiple Placeholder Structure*
 
 
