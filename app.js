@@ -11,10 +11,10 @@ app.get("/", function(request, response){
     })
 })
 
-app.get("/test", function(request, response){
+app.get("/test/:id", function(request, response){
     response.sendFile('./documentation/images/Logo.png', { root : "."})
 })
 
 app.listen(PORT, function(){
-    console.log("Running")
+    console.log("Running on http://localhost:"+PORT)
 })
