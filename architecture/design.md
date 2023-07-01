@@ -13,11 +13,9 @@ These databases (as of now) should be essential for placeholders design
 For each [namespace](#) there is ONE collection. These collections contain list of containers within that namespace.
 
 	- phn-{namespace-id/name} `C`
-
 	Each Namespace is a list of containers within them, and is a list of Records in the collection. Each record is an unique ph-container. Each container is one unique placeholder.
 
     	- phn-containers `R`
-
     	Containers are the basic unit in placeholder that store the content and details. Each container (placeholder) ID/Name maps to the Placeholder's unique URL. 
 
     	```
