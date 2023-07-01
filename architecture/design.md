@@ -27,4 +27,4 @@ These databases (as of now) should be essential for placeholders design
     		Here `container-id-a` is the placeholder id that points to the content in the container A.
 
 
-![](placeholders.db.design.1.jpeg)
+![](placeholders.db.design.phn.jpeg)
