@@ -47,3 +47,13 @@ These databases (as of now) should be essential for placeholders design
 	- phs-users `C`
 
 		A collection with data about placeholder users. Can be set by Identity Provider.
+
+
+
+### *Legends*
+
+| Symbol | Name        | SQL Equivalent |
+|--------|-------------|----------------|
+| `D`    | Database    | Database       |
+| `C`    | Collection  | Table          |
+| `R`    | Record/Data | Row            |
