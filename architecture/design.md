@@ -28,3 +28,22 @@ These databases (as of now) should be essential for placeholders design
 
 
 ![](placeholders.db.design.phn.jpeg)
+
+- ph-system `D`
+
+	A database containing all SYSTEM-LEVEL data and setting.
+
+	- phs-configs `C`
+
+		A collection containing all USER and NAMESPACE -level configs
+
+	- phs-indexes `C`
+
+		A collection where each record (row) is a mapping of unique placeholder-names to placeholder-id and vice versa.
+
+		- ph-container-name ➡️ ph-container-id   `D`
+		- ph-container-id   ➡️ ph-container-name `D`
+
+	- phs-users `C`
+
+		A collection with data about placeholder users. Can be set by Identity Provider.
