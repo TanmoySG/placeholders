@@ -39,8 +39,8 @@ These databases (as of now) should be essential for placeholders design
 
 		A collection where each record (row) is a mapping of unique placeholder-names to placeholder-id and vice versa.
 
-		- ph-container-name ➡️ ph-container-id   `D`
-		- ph-container-id   ➡️ ph-container-name `D`
+		- ph-container-name ➡️ ph-container-id   `R`
+		- ph-container-id   ➡️ ph-container-name `R`
 
 	- phs-users `C`
 
