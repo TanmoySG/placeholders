@@ -27,8 +27,6 @@ These databases (as of now) should be essential for placeholders design
     		Here `container-id-a` is the placeholder id that points to the content in the container A.
 
 
-![](placeholders.db.design.phn.jpeg)
-
 - ph-system `D`
 
 	A database containing all SYSTEM-LEVEL data and setting.
@@ -48,6 +46,8 @@ These databases (as of now) should be essential for placeholders design
 
 		A collection with data about placeholder users. Can be set by Identity Provider.
 
+
+![](placeholders.db.design.jpeg)
 
 
 ### *Legends*
