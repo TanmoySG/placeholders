@@ -1,6 +1,6 @@
 This is a API starter is bootstrapped with [`create-api-starter`](https://www.npmjs.com/package/create-api-starter).
 
-## Getting Started
+## :rocket: Getting Started
 
 Install npm packages and run the development server:
 
@@ -27,7 +27,7 @@ All commands are run from the root of the project, from a terminal:
 
 **_Run `npm run dev` and `npm run json-db` concurrently (in separate terminals) from root of the project for the API and JSON DB to be exposed._**
 
-## json-db CRUD API Endpoints
+## :floppy_disk: json-db CRUD API Endpoints
 
 | HTTP Method | Endpoint |
 | :---------- | :------- |
@@ -39,3 +39,17 @@ All commands are run from the root of the project, from a terminal:
 | DELETE      | /users/1 |
 
 _For filtering, sorting, pagination etc. refer [json-server](https://www.npmjs.com/package/json-server)_
+
+## :closed_lock_with_key: API Reference
+
+#### Register a User
+
+```http
+  POST /{version}/user
+```
+
+| Request Body | Type     | Description                   |
+| :----------- | :------- | :---------------------------- |
+| `username`   | `string` | **Required**. User's Username |
+| `email`      | `string` | **Required**. User's Email    |
+| `password`   | `string` | **Required**. User's Password |

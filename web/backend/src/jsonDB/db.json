@@ -1,3 +1,16 @@
 {
-  "users": [{ "id": 1, "username": "username", "email": "email@email.com", "password": "password" }]
+  "users": [
+    {
+      "id": "221c8de4-7c0a-4b84-9bbd-c0000ffaa8f8",
+      "username": "username",
+      "email": "abc@abc.com",
+      "password": "$2b$11$sIDS9SJgB2Rb7U0hDvYzM.IEyWm/EZV.LocjKSP5XaC3YNqm.K34S"
+    },
+    {
+      "id": "d38e97a7-f643-499c-ae8f-f05047415674",
+      "username": "usernaame",
+      "email": "abcd@abc.com",
+      "password": "$2b$11$EoQdU0RaPyZWPiuERKiwcO3L3PFiOKLzpROFpWsqMhg2Mz7rMjNLq"
+    }
+  ]
 }
