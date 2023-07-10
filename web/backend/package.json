@@ -8,7 +8,8 @@
     "dev": "nodemon --files src/app.ts",
     "build": "npx tsc && copyfiles -u 1 src/public/* build",
     "lint": "eslint src/**/*.ts",
-    "lint-fix": "eslint src/**/*.ts --fix"
+    "lint-fix": "eslint src/**/*.ts --fix",
+    "json-db": "json-server --watch src/jsonDB/db.json --port 5001"
   },
   "keywords": [],
   "author": "Pinaki Bhattacharjee <pinakipb2@gmail.com>",
@@ -20,9 +21,9 @@
     "express-rate-limit": "^6.7.0",
     "helmet": "^6.1.5",
     "http-errors": "^2.0.0",
+    "json-server": "^0.17.3",
     "morgan": "^1.10.0",
-    "serve-favicon": "^2.5.0",
-    "xss-clean": "^0.1.1"
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
