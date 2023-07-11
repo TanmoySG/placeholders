@@ -1,9 +1,9 @@
-import axios from "axios";
 import bcrypt from "bcrypt";
 import { type NextFunction, type Request, type Response } from "express";
 import createError from "http-errors";
 import { v4 as uuidv4 } from "uuid";
 import { ZodError } from "zod";
+import { addUser, addNamespaceTableToDB, getAllUsersWithEmail, getAllUsersWithUsername } from "../../jsonDB/Functions";
 import userRegisterSchema from "../schema/UserRegister.schema";
 
 const userController = {
@@ -11,14 +11,16 @@ const userController = {
     try {
       const sanitizedReqBody = await userRegisterSchema.parseAsync(req.body);
       const hashedPassword = await bcrypt.hash(sanitizedReqBody.password, 11);
-      const newUser = { id: uuidv4(), ...sanitizedReqBody, password: hashedPassword };
+      const user = { id: uuidv4(), ...sanitizedReqBody, password: hashedPassword };
       // JSON DB adds the user if username/email does not exists in DB
-      const usernameExists = await axios.get(`http://localhost:5001/users?username=${sanitizedReqBody.username}`);
-      const emailExists = await axios.get(`http://localhost:5001/users?email=${sanitizedReqBody.email}`);
-      if (usernameExists.data.length === 0 && emailExists.data.length === 0) {
-        const resp = await axios.post("http://localhost:5001/users", { ...newUser });
-        console.log(resp);
-        res.send(newUser);
+      const allUsersWithUsername = await getAllUsersWithUsername(sanitizedReqBody.username);
+      const allUsersWithEmail = await getAllUsersWithEmail(sanitizedReqBody.email);
+      if (allUsersWithUsername.length === 0 && allUsersWithEmail.length === 0) {
+        const addedUser = await addUser(user);
+        console.log(addedUser);
+        await addNamespaceTableToDB(sanitizedReqBody.username);
+        res.status(201).send({ url: `${req.protocol}://${req.headers.host as string}${req.baseUrl}/${sanitizedReqBody.username}`, id: addedUser.id });
+        return;
       }
       next(createError.Conflict("User Already Exists"));
     } catch (err) {

@@ -31,21 +31,21 @@ All commands are run from the root of the project, from a terminal:
 
 | HTTP Method | Endpoint |
 | :---------- | :------- |
-| GET         | /users   |
-| GET         | /users/1 |
-| POST        | /users   |
-| PUT         | /users/1 |
-| PATCH       | /users/1 |
-| DELETE      | /users/1 |
+| GET         | /{table}   |
+| GET         | /{table}/{id} |
+| POST        | /{table}   |
+| PUT         | /{table}/{id} |
+| PATCH       | /{table}/{id} |
+| DELETE      | /{table}/{id} |
 
 _For filtering, sorting, pagination etc. refer [json-server](https://www.npmjs.com/package/json-server)_
 
 ## :closed_lock_with_key: API Reference
 
-#### Register a User
+#### Register an User
 
 ```http
-  POST /{version}/user
+  POST /{version}/users
 ```
 
 | Request Body | Type     | Description                   |
