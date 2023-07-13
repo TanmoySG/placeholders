@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+// Schema to validate request body for userRegister
 const userRegisterSchema = z
   .object({
     username: z.string().min(1, "Username is Required").trim(),

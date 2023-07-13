@@ -26,7 +26,6 @@ const userController = {
     } catch (err) {
       console.log(err);
       if (err instanceof ZodError) {
-        console.log(err);
         next({ status: createError.BadRequest().status, message: err.issues });
         return;
       }

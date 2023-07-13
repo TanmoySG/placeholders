@@ -25,15 +25,17 @@ All commands are run from the root of the project, from a terminal:
 | `npm run lint-fix` | Fixes linting errors                                             |
 | `npm run json-db`  | Starts JSON DB with [API Endpoints](#json-db-crud-api-endpoints) |
 
+**Note: Copy `.env.example` to `.env` and modify the values accordingly.**
+
 **_Run `npm run dev` and `npm run json-db` concurrently (in separate terminals) from root of the project for the API and JSON DB to be exposed._**
 
 ## :floppy_disk: json-db CRUD API Endpoints
 
-| HTTP Method | Endpoint |
-| :---------- | :------- |
-| GET         | /{table}   |
+| HTTP Method | Endpoint      |
+| :---------- | :------------ |
+| GET         | /{table}      |
 | GET         | /{table}/{id} |
-| POST        | /{table}   |
+| POST        | /{table}      |
 | PUT         | /{table}/{id} |
 | PATCH       | /{table}/{id} |
 | DELETE      | /{table}/{id} |

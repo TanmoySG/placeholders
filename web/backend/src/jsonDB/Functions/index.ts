@@ -1,8 +1,8 @@
 import axios from "axios";
 import fs from "node:fs/promises";
 
-const JSON_DB_BASE_URL = "http://localhost:5001";
-const JSON_DB_LOCATION = "./src/jsonDB/db.json";
+const JSON_DB_BASE_URL = process.env.JSON_DB_BASE_URL as string;
+const JSON_DB_LOCATION = process.env.JSON_DB_LOCATION as string;
 const USER_TABLE = "ph-systems-users";
 const NAMESPACE_TABLE = "ph-namespaces";
 
