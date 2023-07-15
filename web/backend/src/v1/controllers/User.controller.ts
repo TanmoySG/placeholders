@@ -3,8 +3,8 @@ import { type NextFunction, type Request, type Response } from "express";
 import createError from "http-errors";
 import { v4 as uuidv4 } from "uuid";
 import { ZodError } from "zod";
-import { addUser, addNamespaceTableToDB, getAllUsersWithEmail, getAllUsersWithUsername } from "../../jsonDB/Functions";
-import userRegisterSchema from "../schema/UserRegister.schema";
+import { addNamespaceTableToDB, addUser, getAllUsersWithEmail, getAllUsersWithUsername } from "../../jsonDB/Functions";
+import { userRegisterSchema } from "../schema";
 
 const userController = {
   async register(req: Request, res: Response, next: NextFunction): Promise<void> {
