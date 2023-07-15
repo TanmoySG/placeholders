@@ -9,8 +9,7 @@ import favicon from "serve-favicon";
 
 import "./v1/config/env.config";
 
-import { defaultMiddleware } from "./v1/middlewares";
-import { defaultRoutes } from "./v1/routes";
+import { userRoutes } from "./v1/routes";
 
 // RateLimitter
 const limiter = rateLimit({
@@ -42,7 +41,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
-app.use(defaultMiddleware);
 
 // Welcome Route
 app.all("/", (_req: Request, res: Response, _next: NextFunction) => {
@@ -52,7 +50,7 @@ app.all("/", (_req: Request, res: Response, _next: NextFunction) => {
 const apiVersion: string = "v1";
 
 // Routes
-app.use(`/${apiVersion}/default`, defaultRoutes);
+app.use(`/${apiVersion}/users`, userRoutes);
 
 // 404 Handler
 app.use((_req: Request, _res: Response, next: NextFunction) => {

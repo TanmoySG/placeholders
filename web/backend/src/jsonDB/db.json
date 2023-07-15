@@ -1,3 +1,18 @@
 {
-  "users": [{ "id": 1, "username": "username", "email": "email@email.com", "password": "password" }]
+  "ph-systems-users": [
+    {
+      "id": "441d66c6-3446-4a9e-8ff8-5a534207580b",
+      "username": "uname",
+      "email": "abc@abc.com",
+      "password": "$2b$11$DQ3GlvvxaEwr/TRsfaujnuL1hM58pHjeXHUDwJeo.Po0889DW5.K."
+    },
+    {
+      "id": "0e0d969c-eb2e-4f67-bef6-8fc6490234bf",
+      "username": "uname1",
+      "email": "abc@abcd.com",
+      "password": "$2b$11$ECO07GvqIokvrQovkdqFrOwlYwdt8PLA47okv7MN8bs8r5V9IMLjS"
+    }
+  ],
+  "ph-namespaces_uname-default-namespace": [],
+  "ph-namespaces_uname1-default-namespace": []
 }
